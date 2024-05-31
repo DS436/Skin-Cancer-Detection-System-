@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://senior-capstone-web-dev.s3.us-east-2.amazonaws.com/WebDev/Pages/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+  <script src="../Controller/chatbox-features.js"></script>
+
+  <title>Detection Systems - AI Health Detector</title>
+</head>
+
+<body>
+  <nav class="container-fluid">
+    <ul>
+        <li><strong>AI Health Detector</strong></li>
+    </ul>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="detection.html">Detection Systems</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="ethics.html">Ethics and Policies</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="login.html" role="button">Login</a></li>
+    </ul>
+</nav>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Detection Systems</h2>
+          <h3>Explore Our Health Detection Applications</h3>
+        </hgroup>
+        <div>
+          <h3>Skin Cancer Detection</h3>
+          <p>Our advanced AI-driven tool for early detection of skin cancer.
+
+          <!-- Start of Chat Interface -->
+          <div class="chat-interface">
+            <div id="color">
+              <div id="chat-container">
+                  <div id="chat-messages">
+                      <!-- Chat messages will be dynamically added here -->
+                      <div id="clear-duster"></div>
+                  </div>
+                  <div id="user-input" class="custom-background">
+                      <div id="input-and-buttons">
+                          <input type="text" id="message-input" placeholder="Type your message here...">
+                          <div id="action-buttons">
+                              <button id="send-button" onclick="sendMessage()">Send</button>
+                              <button id="capture-image-button" onclick="captureImage()">Capture Image</button>
+                              <button id="upload-image-button" onclick="uploadImage()">Upload Image</button>
+                              <button id="print-button" onclick="printConversation()">Print</button>
+                              <button id="clear-button" onclick="clearChat()">Clear Chat</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Duster object for clearing animation -->
+                  <div id="clear-duster"></div>
+              </div>
+          </div>
+          </div>
+          <!-- End of Chat Interface -->
+
+        </div>
+        <div>
+          <h3>Breast Cancer Detection <span class="new">Coming Soon</span></h3>
+          <p>Upcoming application for non-invasive detection of breast cancer. Stay tuned for updates.</p>
+        </div>
+        <div>
+          <h3>Heart Disease Prediction <span class="new">In Development</span></h3>
+          <p>A sophisticated AI model to predict heart disease risk based on various health indicators. More information coming soon.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small>
+      <a href="#privacy">Privacy Policy</a> • <a href="#terms">Terms of Use</a>
+    </small>
+  </footer>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const skinDiagnosisSystem = new SkinDiagnosisSystem();
+});
+</script>
+</html>

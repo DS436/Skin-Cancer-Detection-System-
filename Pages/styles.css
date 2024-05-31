@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* ... other styles ... */
+
+#user-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Adjusted */
+  display: flex;
+  padding: 10px 10px 0 10px; /* Add padding to all sides except bottom */
+  background-color: transparent;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+#input-and-buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Adjusted */
+  z-index: 2;
+}
+
+#input-and-buttons::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust this value to raise the line higher */
+  left: 0;
+  right: 0;
+  height: 2px; /* This is the thickness of your line */
+  background-color: #ccc; /* Color of your line */
+  z-index: -1;
+}
+
+#message-input, #action-buttons button {
+  height: 40px; /* Adjust this to the actual height of your buttons */
+  margin-bottom: 10px; /* This should be equal to or greater than the padding-bottom of #user-input */
+}
+#action-buttons button, #message-input {
+  height: 40px; /* Example height, adjust as necessary */
+  line-height: 40px; /* Match this value to the height to vertically center the text */
+  padding: 0; /* Remove padding to ensure line-height controls the height */
+  /* Other styling properties */
+}
+
+#action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* ... rest of the styles ... */
+
+
+
+#message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  background-color: transparent;
+  color: white;
+}
+
+#action-buttons {
+  display: flex;
+  gap: 8px; /* Space between buttons */
+}
+
+#chat-container {
+  width: 1000px;
+  height: 450px;
+  border: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.65); /* Adjusted the alpha value to be valid */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+#chat-messages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensures it stretches fully horizontally */
+  bottom: 60px; /* Leaves space for #user-input */
+  overflow-y: auto;
+}
+
+#clear-duster {
+  position: absolute;
+  top:   0;
+  left:   0;
+  right:   0;
+  height:   0;
+  background-color: #4f4e4e;
+  z-index:   4; /* Highest z-index so the duster is above everything else */
+  transition: height   0.5s ease-out;
+}
+
+@keyframes clear-animation {
+  0% {
+      height: 0;
+  }
+  100% {
+      height: 100%;
+  }
+}
+
+/* ... rest of the styles ... */
